@@ -1,0 +1,43 @@
+import java.util.Scanner;
+import java.io.*;
+import javax.swing.*;
+
+
+public class TemperatureConverter
+{
+  public static void main (String[] args)
+  {
+    
+    JOptionPane.showMessageDialog(null,"Temperature CONVERTER!",":-))!",JOptionPane.ERROR_MESSAGE);
+    
+    String temp = JOptionPane.showInputDialog(" The Temperature unit that you are entering(K,F, C)"); //Haha, lol get it?//
+    if (temp.equals("F"))
+    {
+      String first = JOptionPane.showInputDialog("enter your Temperatire in Fahrenheit");   
+      double FaEnter = Double.parseDouble(first);
+      double CResult = (5/9)*FaEnter-32;
+      double Kresult = CResult + 273;
+      String outputString =" The temperature you will get in Celsius is %.2, and %.2 in Kelvin",CResult,Kresult);
+        
+       JOptionPane.showMessageDialog(null,outputString,JOptionPane.ERROR_MESSAGE);
+       }
+    else if(temp.equals("C"))
+    {
+      String Second = JOptionPane.showInputDialog("enter your Temperatire in Celsius");   
+      double CelEnter = Double.parseDouble(Second);
+      double FResult = (9/5)*FaEnter+32;
+      double Kresult = CelEnter + 273;
+      String outputString =" The temperature you will get in Fahrenheit is %.2, and %.2 in Kelvin",FResult,Kresult);
+        
+       JOptionPane.showMessageDialog(null,outputString,JOptionPane.ERROR_MESSAGE);
+       }
+else{
+  String Third = JOptionPane.showInputDialog("enter your Temperatire in Kelvin");   
+  double KelEnter = Double.parseDouble(Third);
+  double FResult = (9/5)*(KelEnter-273)+32;
+  double CelResult = KelEnter-273;
+  String outputString =" The temperature you will get in Fahrenheit is %.2, and %.2 in Celsius",FResult,CelResult);
+        JOptionPane.showMessageDialog(null,outputString,JOptionPane.ERROR_MESSAGE);
+        }
+}
+}

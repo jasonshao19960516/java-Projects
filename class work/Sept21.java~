@@ -1,0 +1,24 @@
+import java.util.Scanner;
+import java.io.*;
+import javax.swing.*;
+
+
+public class Sept21
+{
+  public static void main (String[] args)
+  {
+    int i=0;
+     double M= 1000;
+      while(i<=25)
+    {
+      M=M+0.05*M+1000;
+     i++;
+     System.out.println("Ur money is" + M);
+    }
+    
+    
+   }
+ 
+  
+  
+  }

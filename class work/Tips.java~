@@ -1,0 +1,30 @@
+//import java.util.scanner;
+import java.io.*;
+
+public class Tips
+{
+  public static void main (String[] args)
+  {
+    
+   
+    int numPeople = 2;
+    double billAmount= 24;
+    double tipRate= 0.15;
+    
+    double tips;
+    double total;
+    double totalPerPerson;
+    
+    tips=billAmount*tipRate;
+    total=tips+billAmount;
+    totalPerPerson = total/numPeople;
+    
+    System.out.println("if "+"numPeople"+" people have a bill of $"+billAmount+" and leave a "+tipRate);
+  
+    
+  }
+  
+}
+
+
+

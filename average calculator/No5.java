@@ -1,0 +1,50 @@
+import java.util.Scanner;
+import java.io.*;
+import javax.swing.*;
+
+
+public class No5
+{
+  public static void main (String[] args)
+  {
+    double sum =0;
+    double input = 0;
+    boolean stop = false;
+    int totalNums = 0;
+    String inputString;
+    do
+    {
+      try{
+        if(stop == false)
+        {
+          inputString=JOptionPane.showInputDialog("Enter your Number, Press Q to stop");
+          if(inputString.equals("q"))
+          {
+            stop = true;
+          }
+          else if (inputString.equals("Q"))
+          {
+            stop = true;
+          }
+          else
+          {
+            sum=Integer.parseInt(inputString)+sum;
+            totalNums++;
+          }
+        }
+        else
+        {JOptionPane.showMessageDialog(null, "computing average");
+          stop=true;
+        }
+      }
+      catch(Exception ex)
+      {
+        JOptionPane.showMessageDialog(null,"error");
+      }
+    }while(stop==false);
+    double average = sum/totalNums;
+    System.out.println("the average is" +average);
+  }
+}
+            
+ 

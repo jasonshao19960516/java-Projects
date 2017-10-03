@@ -1,0 +1,28 @@
+import java.util.Scanner;
+import java.io.*;
+
+public class BMI
+{
+  public static void main (String[] args)
+  {
+    
+    Scanner input = new Scanner(System.in);
+    
+    System.out.println("Enter your weight in lbs");
+    double weight =input.nextDouble();
+    System.out.println("Enter your height in ft");
+    double height= input.nextDouble();
+    
+    double weightlb;
+    double heightft;
+    double bmi;
+
+    weightlb= weight/ 2.2;
+    heightft= height/0.3048;
+    bmi=weight/height;
+    
+    System.out.format("Your Weight is %.2f lbs and your Height is %.2f ft",weightlb,heightft);
+    System.out.format("Your BMI is %.2f KG/M",bmi);
+  }
+  
+}
